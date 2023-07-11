@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url 'signupurl' %}" method="POST" >{% csrf_token %}
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="field-holder">
+                <label>First name</label>&nbsp;&nbsp;{{form.first_name}}
+            </div>
+        </div><br>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="field-holder">
+                <label>Last name</label>&nbsp;&nbsp;{{form.last_name}}
+            </div>
+        </div><br>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="field-holder">
+                <label>Email Address</label>&nbsp;&nbsp;{{form.email}}
+            </div>
+        </div><br>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="field-holder">
+                <label>Username</label>&nbsp;&nbsp;{{form.username}}
+            </div>
+        </div><br>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="field-holder">
+                <label>Password</label>&nbsp;&nbsp;{{form.password}}
+            </div>
+        </div><br>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="field-holder">
+                <label>Confirm Password</label>&nbsp;&nbsp;{{form.confirm_password}}
+            </div>
+        </div><br>
+      <input type="button" value="Submit">
+
+    </form>
+</body>
+</html>
